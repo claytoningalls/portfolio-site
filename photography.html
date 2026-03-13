@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Logos and Icons/Bolex Site Icon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img width="200" src="Logos and Icons/Clayton Ingalls.png" alt="Clayton Ingalls"></a>
+    </header>
+    <div class="flex-layout flex-block">
+        <button><a href="index.html">cinematography</a></button>
+        <button><a href="editing.html">editing</a></button>
+        <button><a href="photography.html">photography</a></button>
+        <button><a href="about.html">about</a></button>
+        <button><a href="reel.html">reel</a></button>
+    </div>
+    <select name="photo-category" id="photo-category">
+        <option value="all">all</option>
+        <option value="portrait">portrait</option>
+        <option value="landscape">landscape</option>
+        <option value="street">street</option>
+        <option value="still life">still life</option>
+    </select>
+    <div class="photo-grid">
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000016930011.JPEG" alt="Photo 1">
+        </div>
+        <div class="photo-item">
+            <img data-category="landscape" src="photography/000077330008.jpg" alt="Photo 6">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/000054890036.png" alt="Photo 9">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000016930014.jpg" alt="Photo 3">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/000077330037.jpg" alt="Photo 7">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000016930009.JPEG" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000077330007.jpg" alt="Photo 5">
+        </div>
+        <div class="photo-item">
+            <img data-category="still life" src="photography/000077340018.JPG" alt="Photo 10">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/IMG_0106.jpg" alt="Photo 8">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000016930027-2.JPEG" alt="Photo 4">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/IMG_0107.jpg" alt="Photo 11">
+        </div>
+        <div class="photo-item">
+            <img data-category="still life" src="photography/000080460015.jpg" alt="Photo 12">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000080490034.jpg" alt="Photo 13">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/000080480034.jpg" alt="Photo 14">
+        </div>
+        <div class="photo-item">
+            <img data-category="landscape" src="photography/Claytoni301777-R1-023-10.jpg" alt="Photo 15">
+        </div>
+        <div class="photo-item">
+            <img data-category="landscape" src="photography/IMG_8387.jpg" alt="Photo 16">
+        </div>
+        <div class="photo-item">
+            <img data-category="landscape" src="photography/Claytoni301776-R1-066-31A.jpg" alt="Photo 17">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/000098430019.jpg" alt="Photo 18">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000080460008.jpg" alt="Photo 19">
+        </div>
+        <div class="photo-item">
+            <img data-category="still life" src="photography/000080460028.jpg" alt="Photo 20">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000080470031.jpg" alt="Photo 21">
+        </div>
+        <div class="photo-item">
+            <img data-category="landscape" src="photography/IMG_0110.jpg" alt="Photo 22">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/IMG_8395.JPG" alt="Photo 23">
+        </div>
+        <div class="photo-item">
+            <img data-category="still life" src="photography/000077330019.jpg" alt="Photo 24">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/000077340010.jpg" alt="Photo 25">
+        </div>
+        <div class="photo-item">
+            <img data-category="portrait" src="photography/000038230011.jpg" alt="Photo 26">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/ClInga9_ClInga9-R1-043-20_2.jpg" alt="Photo 27">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/IMG_0115.jpg" alt="Photo 28">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/Claytoni301776-R1-072-34A.jpg" alt="Photo 29">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/000080470010.jpg" alt="Photo 30">
+        </div>
+        <div class="photo-item">
+            <img data-category="landscape" src="photography/Claytoni301777-R1-047-22.jpg" alt="Photo 31">
+        </div>
+        <div class="photo-item">
+            <img data-category="street" src="photography/IMG_0121.jpg" alt="Photo 32">
+        </div>
+    </div>
+    <div class="flex-layout flex-block">
+        <img width="75px" src="Logos and Icons/Bolex Drawing.png" alt="bolex">
+        <h4>© 2026 clayton ingalls</h4>
+    </div>
+    <script>
+    (function(){
+      const select = document.getElementById('photo-category');
+      const items = Array.from(document.querySelectorAll('.photo-item'));
+
+      function filterPhotos() {
+        const val = (select.value || '').toLowerCase();
+        items.forEach(item => {
+          const img = item.querySelector('img');
+          const cat = (img?.dataset.category || '').toLowerCase();
+          item.style.display = (val === 'all' || cat === val) ? '' : 'none';
+        });
+      }
+
+      select.addEventListener('change', filterPhotos);
+      // apply on load
+      filterPhotos();
+    })();
+    </script>
+</body>
+</html>
